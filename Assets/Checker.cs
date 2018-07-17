@@ -28,7 +28,7 @@ public class Checker : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
-        if(Input.GetKey(KeyCode.UpArrow))
+        if (Input.GetKey(KeyCode.UpArrow))
         {
             ITI += .02f;
             ITIText.text = "(Up/Down) ITI: " + ITI;
@@ -72,6 +72,8 @@ public class Checker : MonoBehaviour {
             mat.SetVector("Vector2_8D7263AF", matFreq);
             freqText.text = "(A/Q, S/W) Freq: " + matFreq.x + "," + matFreq.y;
         }
+        else if (Input.GetKey(KeyCode.Escape))
+            Application.Quit();
 
         if(Time.time > lastSpawn+ITI)
         {
