@@ -547,6 +547,7 @@ MonoBehaviour:
   stimulusText: {fileID: 610980022}
   freqText: {fileID: 1787420977}
   checkerboard: {fileID: 894347995}
+  pdmarker: {fileID: 1986166418}
 --- !u!224 &1396708525
 RectTransform:
   m_ObjectHideFlags: 0

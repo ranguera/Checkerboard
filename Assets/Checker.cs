@@ -9,6 +9,7 @@ public class Checker : MonoBehaviour {
     public Text stimulusText;
     public Text freqText;
     public GameObject checkerboard;
+    public GameObject pdmarker;
 
     private float ITI;
     private float lastSpawn;
@@ -78,6 +79,7 @@ public class Checker : MonoBehaviour {
         if(Time.time > lastSpawn+ITI)
         {
             checkerboard.SetActive(true);
+            pdmarker.SetActive(true);
             lastSpawn = Time.time;
         }
 
@@ -91,5 +93,6 @@ public class Checker : MonoBehaviour {
     {
         yield return new WaitForSeconds(stimulusTime);
         checkerboard.SetActive(false);
+        pdmarker.SetActive(false);
     }
 }
